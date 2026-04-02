@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F9F8F6;
+  --color-foreground: #1A1A1A;
+  --color-primary: #2C3E2D;
+  --color-primary-foreground: #FFFFFF;
+  --color-muted: #E5E5E5;
+  --color-muted-foreground: #737373;
+  --color-border: #E5E5E5;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #F9F8F6;
+    --foreground: #1A1A1A;
+    --primary: #2C3E2D;
+    --primary-foreground: #FFFFFF;
+    --muted: #E5E5E5;
+    --muted-foreground: #737373;
+    --border: #E5E5E5;
+  }
+
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glass-dark {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Cursor Styles */
+body {
+  cursor: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+a, button, [role="button"], input, select, textarea {
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  a, button, [role="button"], input, select, textarea {
+    cursor: pointer;
+  }
+}
